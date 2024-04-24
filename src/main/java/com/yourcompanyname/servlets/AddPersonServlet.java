@@ -26,7 +26,7 @@ public class AddPersonServlet extends HttpServlet {
         
         // Specify the directory where you want to store the files
         String uploadDir = "uploads"; // Change this to your chosen directory
-        String contextPath = request.getServletContext().getRealPath("");
+        String contextPath = request.getServletContext().getRealPath("uploads");
         String uploadPath = contextPath + File.separator + uploadDir;
         File uploadDirFile = new File(uploadPath);
         if (!uploadDirFile.exists()) {
