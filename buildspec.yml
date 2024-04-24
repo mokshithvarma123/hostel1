@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  build:
+    commands:
+      - mvn clean install
+  post_build:
+    commands:
+      - echo Build completed
+artifacts:
+  files:
+    - target/*.war
+    - server_clear.sh
+    - server_start.sh
+    - server_stop.sh
+    - fix_privileges.sh
+    - deploy.sh
+    - appspec.yml
+ 
